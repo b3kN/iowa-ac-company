@@ -1,4 +1,5 @@
 import { ThemeProvider } from "@/providers/ThemeProvider";
+import { Metadata } from "next";
 import { cookies } from "next/headers";
 import Wrapper from "./components/wrapper";
 
@@ -19,9 +20,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning={true}>
       <body suppressHydrationWarning={true}>
         <ThemeProvider colorMode={colorMode?.value}>
-          <Wrapper>
-            {children}
-          </Wrapper>
+          <Wrapper>{children}</Wrapper>
         </ThemeProvider>
       </body>
     </html>

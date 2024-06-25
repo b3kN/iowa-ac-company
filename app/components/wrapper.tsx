@@ -1,10 +1,26 @@
 "use client";
 
-import { CloseIcon, HamburgerIcon, MoonIcon, PhoneIcon, SunIcon } from "@chakra-ui/icons";
-import { useColorModeValue, Box, Flex, IconButton, HStack, Stack, Button, useColorMode, useDisclosure } from "@chakra-ui/react";
-import NavLink from "./navLink";
+import {
+  CloseIcon,
+  HamburgerIcon,
+  MoonIcon,
+  PhoneIcon,
+  SunIcon,
+} from "@chakra-ui/icons";
+import {
+  Box,
+  Button,
+  Flex,
+  HStack,
+  IconButton,
+  Stack,
+  useColorMode,
+  useColorModeValue,
+  useDisclosure,
+} from "@chakra-ui/react";
+import Image from "next/image";
 import Link from "next/link";
-import Image from 'next/image'
+import NavLink from "./navLink";
 
 const Links = [
   {
@@ -27,11 +43,13 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <Box
-        data-testid="wrapper"
-        bg={useColorModeValue("gray.100", "gray.900")}
-      >
-        <Flex h={16} px={4} alignItems={"center"} justifyContent={"space-between"}>
+      <Box data-testid="wrapper" bg={useColorModeValue("gray.100", "gray.900")}>
+        <Flex
+          h={16}
+          px={4}
+          alignItems={"center"}
+          justifyContent={"space-between"}
+        >
           <IconButton
             size={"md"}
             data-testid="mobileToggle"
@@ -43,7 +61,9 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
           <HStack spacing={8} alignItems={"center"}>
             <Link href={"/"}>
               <Image
-                src={ colorMode === "light" ? "/bobslogo.png" : "/bobslogowhite.png" }
+                src={
+                  colorMode === "light" ? "/bobslogo.png" : "/bobslogowhite.png"
+                }
                 width={120}
                 height={60}
                 alt="Bobs logo"
@@ -66,7 +86,9 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
               fontWeight={"700"}
               fontStyle={"italic"}
               paddingEnd={6}
-            >Quality Can Be Affordable</Box>
+            >
+              Quality Can Be Affordable
+            </Box>
             <Stack
               flex={{ base: 1, md: 0 }}
               justify={"flex-end"}
@@ -97,7 +119,9 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
               fontWeight={"700"}
               fontStyle={"italic"}
               padding={"0.5em 0.75em 0.5em 0"}
-            >Quality Can Be Affordable</Box>
+            >
+              Quality Can Be Affordable
+            </Box>
             <Stack as={"nav"} spacing={4} px={4} paddingTop={4}>
               {Links.map((link) => (
                 <NavLink key={link.key} label={link.key} url={link.url} />

@@ -1,9 +1,9 @@
 "use client";
 
 import { Box } from "@chakra-ui/react";
-import styles from "./about.module.css";
+import styles from "./contact.module.css";
 
-export default function About() {
+export default function Contact() {
   return (
     <Box className={styles.main}>
       <Box className={styles.description}>
