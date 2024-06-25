@@ -1,9 +1,20 @@
 "use client";
 
-import { Box, Button, Container, Flex, Heading, Stack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Container,
+  Flex,
+  Heading,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 import styles from "./about.module.css";
 
-function ServiceCard({ title, description }: { title: string; description: string }) {
+function ServiceCard({
+  title,
+  description,
+}: { title: string; description: string }) {
   return (
     <Box
       bg="white"
@@ -35,7 +46,8 @@ export default function About() {
           Heating & Cooling Services
         </Heading>
         <Text fontSize="lg" mb={4}>
-          We provide top-notch heating and cooling services to keep your home comfortable all year round.
+          We provide top-notch heating and cooling services to keep your home
+          comfortable all year round.
         </Text>
         <Stack direction="row" spacing={4} justify="center">
           <Button colorScheme="teal" size="lg">
@@ -47,7 +59,11 @@ export default function About() {
         </Stack>
       </Box>
 
-      <Flex mt={10} direction={{ base: "column", md: "row" }} justify="space-around">
+      <Flex
+        mt={10}
+        direction={{ base: "column", md: "row" }}
+        justify="space-around"
+      >
         <ServiceCard
           title="Heating Services"
           description="Expert heating repair, installation, and maintenance services."

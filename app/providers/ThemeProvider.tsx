@@ -1,13 +1,18 @@
 "use client";
 
-import { ChakraProvider, ColorModeScript, extendTheme, useColorMode } from "@chakra-ui/react";
-import React from "react";
 import { CacheProvider } from "@chakra-ui/next-js";
+import {
+  ChakraProvider,
+  ColorModeScript,
+  extendTheme,
+  useColorMode,
+} from "@chakra-ui/react";
 import { setCookie } from "cookies-next";
+import React from "react";
 
 const Theme = extendTheme({
   initialColorMode: "system",
-  useSystemColorMode: true
+  useSystemColorMode: true,
 });
 
 export const ThemeProvider = ({

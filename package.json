@@ -1,5 +1,5 @@
 {
-  "name": "bekeris.me",
+  "name": "iowa-ac-company",
   "version": "0.0.1",
   "private": true,
   "release": {
@@ -29,6 +29,8 @@
     "@sentry/nextjs": "^7.105.0",
     "cookies-next": "^4.2.1",
     "framer-motion": "^11.2.11",
+    "husky": "^9.0.11",
+    "jest-html-reporter": "^3.10.2",
     "next": "14.2.2",
     "react": "^18",
     "react-dom": "^18"
@@ -43,10 +45,9 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.2",
-    "husky": "^9.0.11",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-    "semantic-release": "^23.0.8",
+    "semantic-release": "^24.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5"
   },
