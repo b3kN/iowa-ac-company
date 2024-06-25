@@ -1,4 +1,5 @@
 import { Link, useColorModeValue } from "@chakra-ui/react";
+import NextLink from 'next/link'
 
 export default function NavLink({
   label,
@@ -6,6 +7,7 @@ export default function NavLink({
 }: { label: string; url: string }) {
   return (
     <Link
+      as={NextLink}
       px={2}
       py={1}
       rounded={"md"}
