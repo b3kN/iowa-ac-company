@@ -8,9 +8,15 @@ import Wrapper from "./wrapper";
 
 describe("Home", () => {
   it("renders Wrapper", () => {
-    render(<Wrapper>Render Wrapper</Wrapper>);
+    render(
+      <ChakraProvider>
+        <Wrapper>Render Wrapper</Wrapper>
+      </ChakraProvider>,
+    );
 
-    expect(screen.getByRole("navigation")).toBeInTheDocument();
+    const darkModeToggle = screen.getByTestId("themeToggle");
+    expect(darkModeToggle).toBeVisible();
+    expect(screen.getByTestId("moon")).toBeVisible();
   });
 
   it("renders Wrapper and toggles dark mode", () => {
@@ -42,7 +48,12 @@ describe("Home", () => {
       value: 700,
     });
 
-    render(<Wrapper>Test mobile navigation</Wrapper>);
+    render(
+      <ChakraProvider>
+        <Wrapper>Test mobile navigation</Wrapper>
+      </ChakraProvider>,
+    );
+
     expect(window.innerWidth).toBe(400);
     expect(window.innerHeight).toBe(700);
 

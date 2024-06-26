@@ -22,6 +22,7 @@ import { setCookie } from "cookies-next";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
+import SmallWithLogoLeft from "./footer";
 import NavLink from "./navLink";
 
 const Links = [
@@ -137,7 +138,9 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
         ) : null}
       </Box>
 
-      <Box p={4}>{children}</Box>
+      <Box>{children}</Box>
+
+      <SmallWithLogoLeft />
     </>
   );
 }
