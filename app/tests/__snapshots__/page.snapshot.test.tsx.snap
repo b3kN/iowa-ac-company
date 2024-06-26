@@ -3,14 +3,46 @@
 exports[`renders homepage unchanged 1`] = `
 <div>
   <div
-    class="main css-0"
+    class="chakra-container css-1qt3bbd"
   >
     <div
-      class="description css-0"
+      class="chakra-stack css-8t8ekl"
     >
-      <h1>
-        Hello World
-      </h1>
+      <h2
+        class="chakra-heading css-ezczds"
+      >
+        Bob's Heating & Cooling, 
+        <br />
+        <p
+          class="chakra-text css-lorfhg"
+        >
+          where comfort meets affordability.
+        </p>
+      </h2>
+      <p
+        class="chakra-text css-ax9bdp"
+      >
+        At Bob's Heating & Cooling, we pride ourselves on delivering superior heating and cooling solutions that enhance your home's comfort without breaking the bank.
+        <br />
+        <br />
+        With our commitment to quality craftsmanship and customer satisfaction, we ensure that every home enjoys optimal climate control throughout the year.
+      </p>
+      <div
+        class="chakra-stack css-1t1g4dp"
+      >
+        <button
+          class="chakra-button css-1z11qmp"
+          type="button"
+        >
+          Get Started
+        </button>
+        <button
+          class="chakra-button css-4xx2wk"
+          type="button"
+        >
+          Learn more
+        </button>
+      </div>
     </div>
   </div>
 </div>

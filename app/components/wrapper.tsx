@@ -18,11 +18,11 @@ import {
   useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
+import { setCookie } from "cookies-next";
 import Image from "next/image";
 import Link from "next/link";
-import NavLink from "./navLink";
-import { setCookie } from "cookies-next";
 import { useEffect } from "react";
+import NavLink from "./navLink";
 
 const Links = [
   {
@@ -45,7 +45,7 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     setCookie("chakra-ui-color-mode", colorMode);
-  }, [colorMode])
+  }, [colorMode]);
 
   return (
     <>

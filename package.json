@@ -14,7 +14,7 @@
     "lint": "bunx @biomejs/biome lint --apply ./app",
     "format": "bunx @biomejs/biome format --write ./app",
     "check": "bunx @biomejs/biome check ./app",
-    "check:apply": "bunx @biomejs/biome check --apply ./app",
+    "check:apply": "bunx @biomejs/biome check --write ./app",
     "test": "jest",
     "prepare": "husky"
   },
@@ -39,7 +39,6 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^6.4.2",
     "@testing-library/react": "^15.0.6",
-    "@types/bun": "^1.1.5",
     "@types/jest": "^29.5.12",
     "@types/node": "^20",
     "@types/react": "18.2.79",
