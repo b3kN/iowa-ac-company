@@ -1,5 +1,5 @@
 import { ThemeProvider } from "@/providers/ThemeProvider";
-import { Metadata } from "next";
+import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import Wrapper from "./components/wrapper";
 

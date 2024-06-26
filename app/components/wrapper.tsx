@@ -21,6 +21,8 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import NavLink from "./navLink";
+import { setCookie } from "cookies-next";
+import { useEffect } from "react";
 
 const Links = [
   {
@@ -41,9 +43,13 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
+  useEffect(() => {
+    setCookie("chakra-ui-color-mode", colorMode);
+  }, [colorMode])
+
   return (
     <>
-      <Box data-testid="wrapper" bg={useColorModeValue("gray.100", "gray.900")}>
+      <Box data-testid="wrapper" bg={useColorModeValue("gray.300", "gray.900")}>
         <Flex
           h={16}
           px={4}
