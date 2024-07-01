@@ -3,15 +3,74 @@
 exports[`renders homepage unchanged 1`] = `
 <div>
   <div
-    class="main css-0"
+    class="css-19cop37"
+  >
+    <h2
+      class="chakra-heading css-1sq2t96"
+    >
+      About Bob's
+    </h2>
+    <p
+      class="chakra-text css-0"
+    >
+      Established in 2003, Bob's Heating & Cooling offers quality and professional services to Cedar Rapids, IA, and the surrounding area. Our services include the repair and installation of air conditioners and furnaces. We understand the importance of heating and cooling for your home, and our friendly staff will gladly attend to your needs. Give us a call today.
+    </p>
+  </div>
+  <div
+    class="css-1unuuic"
   >
     <div
-      class="description css-0"
+      class="chakra-stack css-1rdhlq"
     >
-      <h1>
-        Hello World
-      </h1>
+      <div
+        class="chakra-stack css-1yuug1o"
+      >
+        <p
+          class="chakra-text css-1xrzlq"
+        >
+          Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor
+        </p>
+        <div
+          class="chakra-stack css-1f0wxn3"
+        >
+          <button
+            class="chakra-button css-di958w"
+            type="button"
+          >
+            Schedule Service
+          </button>
+          <button
+            class="chakra-button css-1dm6egg"
+            type="button"
+          >
+            Contact Us
+          </button>
+        </div>
+      </div>
     </div>
   </div>
+  <div
+    class="css-19cop37"
+  >
+    <h3
+      class="chakra-heading css-ycmg1h"
+    >
+      Success Stories
+    </h3>
+    <p
+      class="chakra-text css-zlipk4"
+    >
+      Mauris id lacus vitae mauris tempor fermentum id sed leo. Donec hendrerit ex mauris, lobortis laoreet tellus gravida a. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean dignissim accumsan tempor. Vestibulum condimentum mattis diam et aliquam. Aliquam erat volutpat. Vestibulum blandit gravida sagittis.
+    </p>
+    <p
+      class="chakra-text css-0"
+    >
+      Curabitur ac tellus sodales, bibendum neque et, ullamcorper nibh. Sed eleifend cursus lacus. Pellentesque ultricies condimentum sodales. Aenean vel gravida odio. Aliquam ultricies tellus eget nunc imperdiet, ac rutrum sapien finibus. Vestibulum ac massa dolor. Sed quam mauris, vulputate vitae rutrum sed, efficitur ac orci.
+    </p>
+  </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
 </div>
 `;
