@@ -13,6 +13,7 @@ import {
 
 export default function Services() {
   return (
+<<<<<<< Updated upstream
     <Box
       maxW="4xl"
       m="1em auto"
@@ -27,6 +28,10 @@ export default function Services() {
         px={{ base: 2, lg: 0 }}
         noOfLines={1}
       >
+=======
+    <Box maxW="4xl" m="1em auto" display="flex" flexDirection={"column"} justifyContent="center">
+      <Heading as='h2' m="0.75em 0 1em" size={{ base: '2xl', lg: '3xl' }} px={{ base: 2, lg: 0 }} noOfLines={1}>
+>>>>>>> Stashed changes
         Services We Provide
       </Heading>
       <Tabs isFitted={true} variant="soft-rounded" colorScheme="green">
