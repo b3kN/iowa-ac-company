@@ -8,6 +8,7 @@ import {
   GridItem,
   VStack,
   chakra,
+  useColorModeValue,
 } from "@chakra-ui/react";
 
 interface FeatureProps {
@@ -41,7 +42,13 @@ export default function ServicesGrid() {
             <chakra.h2 fontSize="3xl" fontWeight="700" lineHeight={1}>
               Services We Provide
             </chakra.h2>
-            <Button colorScheme="green" size="md">
+            <Button
+              bg={useColorModeValue("blue.300", "brand.700")}
+              _hover={{
+                bg: "blue.500",
+              }}
+              size="md"
+            >
               View Services
             </Button>
           </VStack>

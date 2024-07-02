@@ -29,7 +29,7 @@ export default function Services() {
       >
         Services We Provide
       </Heading>
-      <Tabs isFitted={true} variant="soft-rounded" colorScheme="green">
+      <Tabs isFitted={true} variant="soft-rounded">
         <TabList px={2}>
           <Tab>Heating</Tab>
           <Tab>Cooling</Tab>

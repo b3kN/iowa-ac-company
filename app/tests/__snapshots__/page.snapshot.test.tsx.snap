@@ -14,7 +14,7 @@ exports[`renders homepage unchanged 1`] = `
         Bob's Heating & Cooling, 
         <br />
         <p
-          class="chakra-text css-o3deui"
+          class="chakra-text css-26k63w"
         >
           where comfort meets affordability.
         </p>
@@ -31,7 +31,7 @@ exports[`renders homepage unchanged 1`] = `
         class="chakra-stack css-16jsn6a"
       >
         <button
-          class="chakra-button css-1gc111"
+          class="chakra-button css-1sbitpo"
           type="button"
         >
           Schedule Now
@@ -254,7 +254,7 @@ exports[`renders homepage unchanged 1`] = `
             Services We Provide
           </h2>
           <button
-            class="chakra-button css-h211ee"
+            class="chakra-button css-1ql657"
             type="button"
           >
             View Services
@@ -358,7 +358,7 @@ exports[`renders homepage unchanged 1`] = `
           class="chakra-stack css-1f0wxn3"
         >
           <button
-            class="chakra-button css-di958w"
+            class="chakra-button css-1hn8sdm"
             type="button"
           >
             Schedule Service

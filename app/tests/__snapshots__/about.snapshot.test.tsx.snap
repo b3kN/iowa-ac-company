@@ -34,7 +34,7 @@ exports[`renders homepage unchanged 1`] = `
           class="chakra-stack css-1f0wxn3"
         >
           <button
-            class="chakra-button css-di958w"
+            class="chakra-button css-1hn8sdm"
             type="button"
           >
             Schedule Service
