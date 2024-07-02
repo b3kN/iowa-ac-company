@@ -34,7 +34,7 @@ export default function PictureHero() {
           </Text>
           <Stack direction={"row"}>
             <Button
-              bg={"blue.400"}
+              bg={"brand.700"}
               rounded={"full"}
               color={"white"}
               _hover={{ bg: "blue.500" }}

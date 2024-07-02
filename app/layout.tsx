@@ -2,9 +2,10 @@ import { ThemeProvider } from "@/providers/ThemeProvider";
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import Wrapper from "./components/wrapper";
+import config from "./config";
 
 export const metadata: Metadata = {
-  title: "Bob's Heating & Cooling",
+  title: config.app.name,
   description: "Quality work at affordable rates",
 };
 

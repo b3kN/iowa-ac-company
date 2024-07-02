@@ -1,6 +1,14 @@
 "use client";
 
-import { Box, Button, Container, Heading, Stack, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Container,
+  Heading,
+  Stack,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 
 export default function MainHero() {
   return (
@@ -23,12 +31,12 @@ export default function MainHero() {
           <Text
             mt={"-0.4em"}
             fontSize={{ base: "xl", sm: "2xl", md: "4xl" }}
-            color={"green.500"}
+            color={useColorModeValue("blue.700", "brand.400")}
           >
             where comfort meets affordability.
           </Text>
         </Heading>
-        <Text colorScheme="green" fontSize={{ base: "lg", md: "xl" }}>
+        <Text colorScheme="brand" fontSize={{ base: "lg", md: "xl" }}>
           At Bob's Heating & Cooling, we pride ourselves on delivering superior
           heating and cooling solutions that enhance your home's comfort without
           breaking the bank.
@@ -47,11 +55,11 @@ export default function MainHero() {
           position={"relative"}
         >
           <Button
-            colorScheme={"green"}
+            bg={useColorModeValue("blue.300", "brand.700")}
             rounded={"full"}
             px={6}
             _hover={{
-              bg: "green.900",
+              bg: "blue.500",
             }}
           >
             Schedule Now
