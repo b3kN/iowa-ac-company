@@ -1,6 +1,14 @@
 "use client";
 
-import { Box, Button, Container, Heading, Stack, Text, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Container,
+  Heading,
+  Stack,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 
 export default function MainHero() {
   return (
