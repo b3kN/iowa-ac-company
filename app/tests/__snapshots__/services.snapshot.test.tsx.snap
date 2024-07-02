@@ -6,7 +6,7 @@ exports[`renders homepage unchanged 1`] = `
     class="css-1mw79y0"
   >
     <h2
-      class="chakra-heading css-142h9z1"
+      class="chakra-heading css-sxeje8"
     >
       Services We Provide
     </h2>
@@ -15,7 +15,7 @@ exports[`renders homepage unchanged 1`] = `
     >
       <div
         aria-orientation="horizontal"
-        class="chakra-tabs__tablist css-k008qs"
+        class="chakra-tabs__tablist css-1lcez8f"
         role="tablist"
       >
         <button
