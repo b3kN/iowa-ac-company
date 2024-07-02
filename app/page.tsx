@@ -1,14 +1,17 @@
 "use client";
 
-import { Box } from "@chakra-ui/react";
-import styles from "./page.module.css";
+import MainHero from "./components/mainHero";
+import PictureHero from "./components/pictureHero";
+import ServicesGrid from "./components/servicesGrid";
+import WithSpeechBubbles from "./components/testimonials";
 
 export default function Home() {
   return (
-    <Box className={styles.main}>
-      <Box className={styles.description}>
-        <h1>Hello World</h1>
-      </Box>
-    </Box>
+    <>
+      <MainHero />
+      <WithSpeechBubbles />
+      <ServicesGrid />
+      <PictureHero />
+    </>
   );
 }

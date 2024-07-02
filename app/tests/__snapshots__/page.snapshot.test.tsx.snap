@@ -3,15 +3,379 @@
 exports[`renders homepage unchanged 1`] = `
 <div>
   <div
-    class="main css-0"
+    class="chakra-container css-cwlxpc"
   >
     <div
-      class="description css-0"
+      class="chakra-stack css-1vqon60"
     >
-      <h1>
-        Hello World
-      </h1>
+      <h2
+        class="chakra-heading css-18xdtrt"
+      >
+        Bob's Heating & Cooling, 
+        <br />
+        <p
+          class="chakra-text css-o3deui"
+        >
+          where comfort meets affordability.
+        </p>
+      </h2>
+      <p
+        class="chakra-text css-1jn6flm"
+      >
+        At Bob's Heating & Cooling, we pride ourselves on delivering superior heating and cooling solutions that enhance your home's comfort without breaking the bank.
+        <br />
+        <br />
+        With our commitment to quality craftsmanship and customer satisfaction, we ensure that every home enjoys optimal climate control throughout the year.
+      </p>
+      <div
+        class="chakra-stack css-16jsn6a"
+      >
+        <button
+          class="chakra-button css-1gc111"
+          type="button"
+        >
+          Schedule Now
+        </button>
+        <button
+          class="chakra-button css-lzznh3"
+          type="button"
+        >
+          Learn more about us
+        </button>
+      </div>
     </div>
   </div>
+  <div
+    class="css-7luvuw"
+  >
+    <div
+      class="chakra-stack chakra-container css-1ixf83w"
+    >
+      <div
+        class="chakra-stack css-dk69dq"
+      >
+        <h2
+          class="chakra-heading css-1dklj6k"
+        >
+          Our Clients Speak
+        </h2>
+        <p
+          class="chakra-text css-0"
+        >
+          We have been working with clients around the world
+        </p>
+      </div>
+      <div
+        class="chakra-stack css-1fbxtxo"
+      >
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-stack css-v66e3i"
+          >
+            <h3
+              class="chakra-heading css-1llz29a"
+            >
+              Efficient Collaborating
+            </h3>
+            <p
+              class="chakra-text css-3c0zu9"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
+            </p>
+          </div>
+          <div
+            class="css-1p6ys5y"
+          >
+            <span
+              class="chakra-avatar css-1pubdvw"
+            >
+              <svg
+                aria-label=" avatar"
+                class="chakra-avatar__svg css-16ite8i"
+                role="img"
+                viewBox="0 0 128 128"
+              >
+                <path
+                  d="M103,102.1388 C93.094,111.92 79.3504,118 64.1638,118 C48.8056,118 34.9294,111.768 25,101.7892 L25,95.2 C25,86.8096 31.981,80 40.6,80 L87.4,80 C96.019,80 103,86.8096 103,95.2 L103,102.1388 Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M63.9961647,24 C51.2938136,24 41,34.2938136 41,46.9961647 C41,59.7061864 51.2938136,70 63.9961647,70 C76.6985159,70 87,59.7061864 87,46.9961647 C87,34.2938136 76.6985159,24 63.9961647,24"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
+            <div
+              class="chakra-stack css-1kjx7mh"
+            >
+              <p
+                class="chakra-text css-35ezg3"
+              >
+                Jane Cooper
+              </p>
+              <p
+                class="chakra-text css-1pahln7"
+              >
+                CEO at ABC Corporation
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-stack css-v66e3i"
+          >
+            <h3
+              class="chakra-heading css-1llz29a"
+            >
+              Intuitive Design
+            </h3>
+            <p
+              class="chakra-text css-3c0zu9"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
+            </p>
+          </div>
+          <div
+            class="css-1p6ys5y"
+          >
+            <span
+              class="chakra-avatar css-1pubdvw"
+            >
+              <svg
+                aria-label=" avatar"
+                class="chakra-avatar__svg css-16ite8i"
+                role="img"
+                viewBox="0 0 128 128"
+              >
+                <path
+                  d="M103,102.1388 C93.094,111.92 79.3504,118 64.1638,118 C48.8056,118 34.9294,111.768 25,101.7892 L25,95.2 C25,86.8096 31.981,80 40.6,80 L87.4,80 C96.019,80 103,86.8096 103,95.2 L103,102.1388 Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M63.9961647,24 C51.2938136,24 41,34.2938136 41,46.9961647 C41,59.7061864 51.2938136,70 63.9961647,70 C76.6985159,70 87,59.7061864 87,46.9961647 C87,34.2938136 76.6985159,24 63.9961647,24"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
+            <div
+              class="chakra-stack css-1kjx7mh"
+            >
+              <p
+                class="chakra-text css-35ezg3"
+              >
+                Jane Cooper
+              </p>
+              <p
+                class="chakra-text css-1pahln7"
+              >
+                CEO at ABC Corporation
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-0"
+        >
+          <div
+            class="chakra-stack css-v66e3i"
+          >
+            <h3
+              class="chakra-heading css-1llz29a"
+            >
+              Mindblowing Service
+            </h3>
+            <p
+              class="chakra-text css-3c0zu9"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Auctor neque sed imperdiet nibh lectus feugiat nunc sem.
+            </p>
+          </div>
+          <div
+            class="css-1p6ys5y"
+          >
+            <span
+              class="chakra-avatar css-1pubdvw"
+            >
+              <svg
+                aria-label=" avatar"
+                class="chakra-avatar__svg css-16ite8i"
+                role="img"
+                viewBox="0 0 128 128"
+              >
+                <path
+                  d="M103,102.1388 C93.094,111.92 79.3504,118 64.1638,118 C48.8056,118 34.9294,111.768 25,101.7892 L25,95.2 C25,86.8096 31.981,80 40.6,80 L87.4,80 C96.019,80 103,86.8096 103,95.2 L103,102.1388 Z"
+                  fill="currentColor"
+                />
+                <path
+                  d="M63.9961647,24 C51.2938136,24 41,34.2938136 41,46.9961647 C41,59.7061864 51.2938136,70 63.9961647,70 C76.6985159,70 87,59.7061864 87,46.9961647 C87,34.2938136 76.6985159,24 63.9961647,24"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
+            <div
+              class="chakra-stack css-1kjx7mh"
+            >
+              <p
+                class="chakra-text css-35ezg3"
+              >
+                Jane Cooper
+              </p>
+              <p
+                class="chakra-text css-1pahln7"
+              >
+                CEO at ABC Corporation
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="chakra-container css-7zmi9s"
+  >
+    <div
+      class="css-1hi9t63"
+    >
+      <div
+        class="css-zd4of5"
+      >
+        <div
+          class="chakra-stack css-1jv9mt5"
+        >
+          <h2
+            class="css-109d8zp"
+          >
+            Services We Provide
+          </h2>
+          <button
+            class="chakra-button css-h211ee"
+            type="button"
+          >
+            View Services
+          </button>
+        </div>
+      </div>
+      <div
+        class="css-0"
+      >
+        <div
+          class="css-k008qs"
+        >
+          <p
+            class="css-0"
+          >
+            Provide your customers a story they would enjoy keeping in mind the objectives of your website. Pay special attention to the tone of voice.
+          </p>
+        </div>
+      </div>
+    </div>
+    <hr
+      aria-orientation="horizontal"
+      class="chakra-divider css-gir5mk"
+    />
+    <div
+      class="css-1gmb2s4"
+    >
+      <div
+        class="css-0"
+      >
+        <h3
+          class="css-pl6mc2"
+        >
+          First Feature
+        </h3>
+        <p
+          class="css-0"
+        >
+          Short text describing one of you features/service
+        </p>
+      </div>
+      <div
+        class="css-0"
+      >
+        <h3
+          class="css-pl6mc2"
+        >
+          Second Feature
+        </h3>
+        <p
+          class="css-0"
+        >
+          Short text describing one of you features/service
+        </p>
+      </div>
+      <div
+        class="css-0"
+      >
+        <h3
+          class="css-pl6mc2"
+        >
+          Third Feature
+        </h3>
+        <p
+          class="css-0"
+        >
+          Short text describing one of you features/service
+        </p>
+      </div>
+      <div
+        class="css-0"
+      >
+        <h3
+          class="css-pl6mc2"
+        >
+          Fourth Feature
+        </h3>
+        <p
+          class="css-0"
+        >
+          Short text describing one of you features/service
+        </p>
+      </div>
+    </div>
+  </div>
+  <div
+    class="css-1tgh7d3"
+  >
+    <div
+      class="chakra-stack css-1rdhlq"
+    >
+      <div
+        class="chakra-stack css-1yuug1o"
+      >
+        <p
+          class="chakra-text css-1xrzlq"
+        >
+          Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor
+        </p>
+        <div
+          class="chakra-stack css-1f0wxn3"
+        >
+          <button
+            class="chakra-button css-di958w"
+            type="button"
+          >
+            Schedule Service
+          </button>
+          <button
+            class="chakra-button css-1dm6egg"
+            type="button"
+          >
+            Contact Us
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
 </div>
 `;

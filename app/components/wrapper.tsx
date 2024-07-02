@@ -18,8 +18,11 @@ import {
   useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
+import { setCookie } from "cookies-next";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
+import SmallWithLogoLeft from "./footer";
 import NavLink from "./navLink";
 
 const Links = [
@@ -41,9 +44,13 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
 
+  useEffect(() => {
+    setCookie("chakra-ui-color-mode", colorMode);
+  }, [colorMode]);
+
   return (
     <>
-      <Box data-testid="wrapper" bg={useColorModeValue("gray.100", "gray.900")}>
+      <Box data-testid="wrapper" bg={useColorModeValue("gray.300", "gray.900")}>
         <Flex
           h={16}
           px={4}
@@ -131,7 +138,9 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
         ) : null}
       </Box>
 
-      <Box p={4}>{children}</Box>
+      <Box>{children}</Box>
+
+      <SmallWithLogoLeft />
     </>
   );
 }

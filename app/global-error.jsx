@@ -6,6 +6,7 @@ import { useEffect } from "react";
 
 export default function GlobalError({ error }) {
   useEffect(() => {
+    console.log("===================");
     Sentry.captureException(error);
   }, [error]);
 

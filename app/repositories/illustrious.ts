@@ -1,4 +1,7 @@
+import config from "@/config";
+
 const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
+const { api } = config.app;
 
 export async function fetchData(): Promise<{
   name: string;
@@ -6,7 +9,7 @@ export async function fetchData(): Promise<{
 }> {
   await delay(2000);
 
-  const res = await fetch(`https://api.illustrious.cloud`, {
+  const res = await fetch(api, {
     method: "GET",
     headers: {
       Accept: "application/json",
