@@ -13,7 +13,8 @@ exports[`renders homepage unchanged 1`] = `
     <p
       class="chakra-text css-0"
     >
-      Established in 2003, Bob's Heating & Cooling offers quality and professional services to Cedar Rapids, IA, and the surrounding area. Our services include the repair and installation of air conditioners and furnaces. We understand the importance of heating and cooling for your home, and our friendly staff will gladly attend to your needs. Give us a call today.
+      Established in 2003, 
+       offers quality and professional services to Cedar Rapids, IA, and the surrounding area. Our services include the repair and installation of air conditioners and furnaces. We understand the importance of heating and cooling for your home, and our friendly staff will gladly attend to your needs. Give us a call today.
     </p>
   </div>
   <div

@@ -1,5 +1,6 @@
 "use client";
 
+import config from "@/config";
 import {
   Box,
   Button,
@@ -9,6 +10,7 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
+import NextLink from "next/link";
 
 export default function MainHero() {
   return (
@@ -27,7 +29,7 @@ export default function MainHero() {
           fontSize={{ base: "3xl", sm: "5xl", md: "7xl" }}
           lineHeight={"110%"}
         >
-          Bob's Heating & Cooling, <br />
+          {config.app.name}, <br />
           <Text
             mt={"-0.4em"}
             fontSize={{ base: "xl", sm: "2xl", md: "4xl" }}
@@ -37,7 +39,7 @@ export default function MainHero() {
           </Text>
         </Heading>
         <Text colorScheme="brand" fontSize={{ base: "lg", md: "xl" }}>
-          At Bob's Heating & Cooling, we pride ourselves on delivering superior
+          At {config.app.name}, we pride ourselves on delivering superior
           heating and cooling solutions that enhance your home's comfort without
           breaking the bank.
           <br />
@@ -54,19 +56,28 @@ export default function MainHero() {
           alignSelf={"center"}
           position={"relative"}
         >
-          <Button
-            bg={useColorModeValue("blue.300", "brand.700")}
-            rounded={"full"}
-            px={6}
-            _hover={{
-              bg: "blue.500",
-            }}
-          >
-            Schedule Now
-          </Button>
-          <Button variant={"link"} colorScheme={"blue"} size={"sm"}>
-            Learn more about us
-          </Button>
+          <NextLink href='/services' passHref>
+            <Button
+              bg={useColorModeValue("blue.300", "brand.700")}
+              rounded={"full"}
+              px={6}
+              _hover={{
+                bg: "blue.500",
+              }}
+            >
+              Schedule Now
+            </Button>
+          </NextLink>
+
+          <NextLink href='/about' passHref>
+            <Button
+              variant={"link"}
+              colorScheme={"brand"}
+              size={"sm"}
+            >
+              Learn more about us
+            </Button>
+          </NextLink>
         </Stack>
       </Stack>
     </Container>

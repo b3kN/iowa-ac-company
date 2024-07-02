@@ -11,7 +11,7 @@ exports[`renders homepage unchanged 1`] = `
       <h2
         class="chakra-heading css-18xdtrt"
       >
-        Bob's Heating & Cooling, 
+        , 
         <br />
         <p
           class="chakra-text css-26k63w"
@@ -22,7 +22,8 @@ exports[`renders homepage unchanged 1`] = `
       <p
         class="chakra-text css-1jn6flm"
       >
-        At Bob's Heating & Cooling, we pride ourselves on delivering superior heating and cooling solutions that enhance your home's comfort without breaking the bank.
+        At 
+        , we pride ourselves on delivering superior heating and cooling solutions that enhance your home's comfort without breaking the bank.
         <br />
         <br />
         With our commitment to quality craftsmanship and customer satisfaction, we ensure that every home enjoys optimal climate control throughout the year.
@@ -30,18 +31,26 @@ exports[`renders homepage unchanged 1`] = `
       <div
         class="chakra-stack css-16jsn6a"
       >
-        <button
-          class="chakra-button css-1sbitpo"
-          type="button"
+        <a
+          href="/services"
         >
-          Schedule Now
-        </button>
-        <button
-          class="chakra-button css-lzznh3"
-          type="button"
+          <button
+            class="chakra-button css-1sbitpo"
+            type="button"
+          >
+            Schedule Now
+          </button>
+        </a>
+        <a
+          href="/about"
         >
-          Learn more about us
-        </button>
+          <button
+            class="chakra-button css-1segdpo"
+            type="button"
+          >
+            Learn more about us
+          </button>
+        </a>
       </div>
     </div>
   </div>

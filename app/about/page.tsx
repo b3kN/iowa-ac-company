@@ -1,6 +1,7 @@
 "use client";
 
 import PictureHero from "@/components/pictureHero";
+import config from "@/config";
 import { Box, Heading, Text } from "@chakra-ui/react";
 
 export default function About() {
@@ -24,7 +25,7 @@ export default function About() {
           About Bob's
         </Heading>
         <Text>
-          Established in 2003, Bob's Heating & Cooling offers quality and
+          Established in 2003, {config.app.name} offers quality and
           professional services to Cedar Rapids, IA, and the surrounding area.
           Our services include the repair and installation of air conditioners
           and furnaces. We understand the importance of heating and cooling for

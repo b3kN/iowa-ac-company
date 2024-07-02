@@ -13,6 +13,7 @@ import {
 } from "@chakra-ui/react";
 import { ReactNode } from "react";
 import { FcGoogle } from "react-icons/fc";
+import NextLink from "next/link";
 
 const SocialButton = ({
   children,
@@ -24,25 +25,25 @@ const SocialButton = ({
   href: string;
 }) => {
   return (
-    <chakra.button
-      bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
-      rounded={"full"}
-      w={8}
-      h={8}
-      cursor={"pointer"}
-      as={"a"}
-      href={href}
-      display={"inline-flex"}
-      alignItems={"center"}
-      justifyContent={"center"}
-      transition={"background 0.3s ease"}
-      _hover={{
-        bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
-      }}
-    >
-      <VisuallyHidden>{label}</VisuallyHidden>
-      {children}
-    </chakra.button>
+    <NextLink href={href} passHref>
+      <chakra.button
+        bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+        rounded={"full"}
+        w={8}
+        h={8}
+        cursor={"pointer"}
+        display={"inline-flex"}
+        alignItems={"center"}
+        justifyContent={"center"}
+        transition={"background 0.3s ease"}
+        _hover={{
+          bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
+        }}
+      >
+        <VisuallyHidden>{label}</VisuallyHidden>
+        {children}
+      </chakra.button>
+    </NextLink>
   );
 };
 

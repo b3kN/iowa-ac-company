@@ -1,6 +1,7 @@
 "use client";
 
 import { sendEmail } from "@/utils/sendEmail";
+import { validateRecaptcha } from "@/utils/validateRecaptcha";
 import {
   Box,
   Button,
@@ -20,8 +21,9 @@ import {
   useColorModeValue,
   useToast,
 } from "@chakra-ui/react";
-import { useState } from "react";
-import { GoogleReCaptcha } from "react-google-recaptcha-v3";
+import NextLink from "next/link";
+import { useCallback, useEffect, useState } from "react";
+import { GoogleReCaptcha, useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { useForm } from "react-hook-form";
 import { BsPerson } from "react-icons/bs";
 import { MdEmail, MdOutlineEmail, MdPhone } from "react-icons/md";
@@ -30,6 +32,7 @@ export type FormData = {
   name: string;
   email: string;
   message: string;
+  token: string;
 };
 
 export default function Contact() {
@@ -56,6 +59,28 @@ export default function Contact() {
       });
     }
   }
+  const { executeRecaptcha } = useGoogleReCaptcha();
+
+  // Create an event handler so you can call the verification on button click event or form submit
+  const handleReCaptchaVerify = useCallback(async () => {
+    if (!executeRecaptcha) {
+      console.log('Execute recaptcha not yet available');
+      return;
+    }
+    console.log('obtain token now');
+
+    const token = await executeRecaptcha('verifyInquiry');
+    const validToken = await validateRecaptcha(token);
+    console.log('obtained token', token);
+    console.log('goken validation', validToken);
+    setVerified(validToken);
+    // Do whatever you want with the token
+  }, [executeRecaptcha]);
+
+  // You can use useEffect to trigger the verification as soon as the component being loaded
+  useEffect(() => {
+    handleReCaptchaVerify();
+  }, [handleReCaptchaVerify]);
 
   return (
     <Flex
@@ -68,10 +93,7 @@ export default function Contact() {
       gap={{ base: 12, md: 14, lg: 18 }}
     >
       <GoogleReCaptcha
-        onVerify={() => {
-          console.log("VERIFIED!");
-          setVerified(true);
-        }}
+        onVerify={handleReCaptchaVerify}
       />
       <Box width={{ base: "16rem", sm: "20rem", lg: "24rem" }}>
         <Heading>Contact Us</Heading>
@@ -85,7 +107,7 @@ export default function Contact() {
         <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
           <VStack pl={0} spacing={3} alignItems="flex-start">
             <Button
-              as={"a"}
+              as={NextLink}
               size="md"
               w={240}
               height={10}
@@ -101,7 +123,7 @@ export default function Contact() {
               +1 (319) 981-7333
             </Button>
             <Button
-              as={"a"}
+              as={NextLink}
               size="md"
               w={240}
               height={10}
@@ -231,6 +253,9 @@ export default function Contact() {
                     bg="brand.700"
                     color="white"
                     _hover={{}}
+                    _disabled={{
+                      bg: "gray.500"
+                    }}
                     disabled={!verified}
                   >
                     Send Message

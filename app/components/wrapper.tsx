@@ -23,6 +23,7 @@ import { setCookie } from "cookies-next";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
+import NextLink from "next/link";
 import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import SmallWithLogoLeft from "./footer";
 import NavLink from "./navLink";
@@ -50,6 +51,7 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     setCookie("chakra-ui-color-mode", colorMode);
   }, [colorMode]);
+
 
   return (
     <GoogleReCaptchaProvider reCaptchaKey={config.app.captchaKey}>
@@ -112,7 +114,7 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
                   <SunIcon data-testid="sun" />
                 )}
               </Button>
-              <Button as={"a"} href={"/contact"}>
+              <Button as={"a"} href={"tel:+13199817333"}>
                 <PhoneIcon />
               </Button>
             </Stack>

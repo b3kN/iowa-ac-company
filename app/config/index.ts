@@ -1,9 +1,9 @@
 export default {
   app: {
-    name: process.env.APP_NAME,
-    api: process.env.API_URL,
-    contact: process.env.APP_CONTACT_EMAIL,
-    sendgridKey: process.env.SENDGRID_API_KEY,
-    captchaKey: process.env.CAPTCHA_KEY,
+    name: process.env.name,
+    api: process.env.api,
+    contact: process.env.contact,
+    sendgridKey: process.env.sendgridKey,
+    captchaKey: process.env.captchaKey,
   },
 };
