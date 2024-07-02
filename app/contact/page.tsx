@@ -1,84 +1,120 @@
 "use client";
 
+import { sendEmail } from "@/utils/sendEmail";
 import {
   Box,
   Button,
-  Container,
   Flex,
   FormControl,
+  FormErrorMessage,
   FormLabel,
-  HStack,
   Heading,
-  IconButton,
   Input,
   InputGroup,
   InputLeftElement,
+  Spinner,
   Text,
   Textarea,
   VStack,
-  Wrap,
-  WrapItem,
+  useBreakpointValue,
+  useColorModeValue,
+  useToast,
 } from "@chakra-ui/react";
-import { BsDiscord, BsGithub, BsPerson } from "react-icons/bs";
-import {
-  MdEmail,
-  MdFacebook,
-  MdLocationOn,
-  MdOutlineEmail,
-  MdPhone,
-} from "react-icons/md";
+import { useState } from "react";
+import { GoogleReCaptcha } from "react-google-recaptcha-v3";
+import { useForm } from "react-hook-form";
+import { BsPerson } from "react-icons/bs";
+import { MdEmail, MdOutlineEmail, MdPhone } from "react-icons/md";
+
+export type FormData = {
+  name: string;
+  email: string;
+  message: string;
+};
 
 export default function Contact() {
+  const [verified, setVerified] = useState(false);
+  const toast = useToast();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+  } = useForm<FormData>();
+  async function onSubmit(data: FormData) {
+    try {
+      const emailResponse = await sendEmail(data);
+      toast({
+        title: `${emailResponse.message}`,
+        status: "success",
+        isClosable: true,
+      });
+    } catch (error) {
+      toast({
+        title: `${error.message}`,
+        status: "error",
+        isClosable: true,
+      });
+    }
+  }
+
   return (
     <Flex
       m="auto 0"
       flexDir={{ base: "column", md: "row" }}
-      py={{ sm: 42, md: 32 }}
+      py={{ base: 42, md: 32 }}
       w="full"
       justifyContent="center"
       alignItems="center"
       gap={{ base: 12, md: 14, lg: 18 }}
     >
+      <GoogleReCaptcha
+        onVerify={() => {
+          console.log("VERIFIED!");
+          setVerified(true);
+        }}
+      />
       <Box width={{ base: "16rem", sm: "20rem", lg: "24rem" }}>
-        <Heading>Contact</Heading>
+        <Heading>Contact Us</Heading>
         <Text
           fontSize={{ base: 14, sm: 18 }}
-          mt={{ sm: 3, md: 3, lg: 5 }}
-          color="gray.500"
+          mt={{ sm: 3, lg: 5 }}
+          color={useColorModeValue("gray.700", "gray.500")}
         >
           Fill out the form, or contact us directly!
         </Text>
         <Box py={{ base: 5, sm: 5, md: 8, lg: 10 }}>
           <VStack pl={0} spacing={3} alignItems="flex-start">
             <Button
+              as={"a"}
               size="md"
-              height="48px"
-              width="200px"
+              w={240}
+              height={10}
               variant="ghost"
-              _hover={{ border: "2px solid #1C6FEB" }}
-              leftIcon={<MdPhone color="#1970F1" size="20px" />}
+              _hover={{
+                borderWidth: 2,
+                borderBlock: "solid",
+                borderColor: "brand.900",
+              }}
+              leftIcon={<MdPhone color="#0054ba" size="20px" />}
+              href="tel:+13199817333"
             >
-              +91-988888888
+              +1 (319) 981-7333
             </Button>
             <Button
+              as={"a"}
               size="md"
-              height="48px"
-              width="200px"
+              w={240}
+              height={10}
               variant="ghost"
-              _hover={{ border: "2px solid #1C6FEB" }}
-              leftIcon={<MdEmail color="#1970F1" size="20px" />}
+              _hover={{
+                borderWidth: 2,
+                borderBlock: "solid",
+                borderColor: "brand.900",
+              }}
+              leftIcon={<MdEmail color="#0054ba" size="20px" />}
+              href="mailto:fake@fake.com"
             >
               hello@abc.com
-            </Button>
-            <Button
-              size="md"
-              height="48px"
-              width="200px"
-              variant="ghost"
-              _hover={{ border: "2px solid #1C6FEB" }}
-              leftIcon={<MdLocationOn color="#1970F1" size="20px" />}
-            >
-              Karnavati, India
             </Button>
           </VStack>
         </Box>
@@ -87,43 +123,122 @@ export default function Contact() {
         <Box
           width={{ base: "16rem", sm: "20rem", lg: "24rem" }}
           m={8}
-          color="#0B0E3F"
+          color="gray.700"
         >
-          <VStack spacing={5}>
-            <FormControl id="name">
-              <FormLabel>Your Name</FormLabel>
-              <InputGroup borderColor="#E0E1E7">
-                <InputLeftElement pointerEvents="none">
-                  <BsPerson color="gray.800" />
-                </InputLeftElement>
-                <Input type="text" size="md" />
-              </InputGroup>
-            </FormControl>
-            <FormControl id="name">
-              <FormLabel>Mail</FormLabel>
-              <InputGroup borderColor="#E0E1E7">
-                <InputLeftElement pointerEvents="none">
-                  <MdOutlineEmail color="gray.800" />
-                </InputLeftElement>
-                <Input type="text" size="md" />
-              </InputGroup>
-            </FormControl>
-            <FormControl id="name">
-              <FormLabel>Message</FormLabel>
-              <Textarea
-                borderColor="gray.300"
-                _hover={{
-                  borderRadius: "gray.300",
-                }}
-                placeholder="message"
-              />
-            </FormControl>
-            <FormControl id="name" float="right">
-              <Button variant="solid" bg="#0D74FF" color="white" _hover={{}}>
-                Send Message
-              </Button>
-            </FormControl>
-          </VStack>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <VStack spacing={5}>
+              <FormControl isInvalid={!!errors.name}>
+                <FormLabel>Your Name</FormLabel>
+                <InputGroup borderColor="gray.300">
+                  <InputLeftElement pointerEvents="none">
+                    <BsPerson color="gray.800" />
+                  </InputLeftElement>
+                  <Input
+                    {...register("name", {
+                      required: "Name is required",
+                      pattern: {
+                        value: /^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$/g,
+                        message: "Invalid characters found in name, Sorry...",
+                      },
+                    })}
+                    borderColor="gray.300"
+                    placeholder="Your Name"
+                    _placeholder={{
+                      color: "gray.500",
+                    }}
+                    _hover={{
+                      borderColor: "gray.500",
+                      _placeholder: {
+                        color: "gray.700",
+                      },
+                    }}
+                    id="name"
+                    type="text"
+                    size="md"
+                  />
+                </InputGroup>
+                <FormErrorMessage>
+                  {errors.name && errors.name.message}
+                </FormErrorMessage>
+              </FormControl>
+              <FormControl isInvalid={!!errors.email}>
+                <FormLabel>Mail</FormLabel>
+                <InputGroup borderColor="gray.300">
+                  <InputLeftElement pointerEvents="none">
+                    <MdOutlineEmail color="gray.800" />
+                  </InputLeftElement>
+                  <Input
+                    {...register("email", {
+                      required: "Email is required",
+                      pattern: {
+                        value:
+                          /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/g,
+                        message: "Please correct the email address.",
+                      },
+                    })}
+                    borderColor="gray.300"
+                    placeholder="Your Email Address"
+                    _placeholder={{
+                      color: "gray.500",
+                    }}
+                    _hover={{
+                      borderColor: "gray.500",
+                      _placeholder: {
+                        color: "gray.700",
+                      },
+                    }}
+                    id="email"
+                    type="text"
+                    size="md"
+                  />
+                </InputGroup>
+                <FormErrorMessage>
+                  {errors.email && errors.email.message}
+                </FormErrorMessage>
+              </FormControl>
+              <FormControl isInvalid={!!errors.message}>
+                <FormLabel>Message</FormLabel>
+                <Textarea
+                  {...register("message", {
+                    required: "Message is required",
+                    maxLength: { value: 150, message: "Woah, too long!" },
+                  })}
+                  id="message"
+                  borderColor="gray.300"
+                  _placeholder={{
+                    color: "gray.500",
+                  }}
+                  _hover={{
+                    borderColor: "gray.500",
+                    _placeholder: {
+                      color: "gray.700",
+                    },
+                  }}
+                  placeholder="Type your message here"
+                  rows={useBreakpointValue({ base: 10, md: 6 })}
+                />
+                <FormErrorMessage>
+                  {errors.message && errors.message.message}
+                </FormErrorMessage>
+              </FormControl>
+              <FormControl id="name" float="right">
+                {isSubmitting ? (
+                  <Spinner />
+                ) : (
+                  <Button
+                    type="submit"
+                    variant="solid"
+                    bg="brand.700"
+                    color="white"
+                    _hover={{}}
+                    disabled={!verified}
+                  >
+                    Send Message
+                  </Button>
+                )}
+              </FormControl>
+            </VStack>
+          </form>
         </Box>
       </Box>
     </Flex>

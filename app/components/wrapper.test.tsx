@@ -2,16 +2,22 @@
  * @jest-environment jsdom
  */
 
+import config from "@/config";
 import { ChakraProvider } from "@chakra-ui/react";
 import { fireEvent, render, screen } from "@testing-library/react";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import Wrapper from "./wrapper";
+
+const { captchaKey } = config.app;
 
 describe("Home", () => {
   it("renders Wrapper", () => {
     render(
-      <ChakraProvider>
-        <Wrapper>Render Wrapper</Wrapper>
-      </ChakraProvider>,
+      <GoogleReCaptchaProvider reCaptchaKey={captchaKey}>
+        <ChakraProvider>
+          <Wrapper>Render Wrapper</Wrapper>
+        </ChakraProvider>
+      </GoogleReCaptchaProvider>,
     );
 
     const darkModeToggle = screen.getByTestId("themeToggle");
@@ -21,9 +27,11 @@ describe("Home", () => {
 
   it("renders Wrapper and toggles dark mode", () => {
     render(
-      <ChakraProvider>
-        <Wrapper>Test Dark Mode</Wrapper>
-      </ChakraProvider>,
+      <GoogleReCaptchaProvider reCaptchaKey={captchaKey}>
+        <ChakraProvider>
+          <Wrapper>Test Dark Mode</Wrapper>
+        </ChakraProvider>
+      </GoogleReCaptchaProvider>,
     );
 
     const darkModeToggle = screen.getByTestId("themeToggle");
@@ -49,9 +57,11 @@ describe("Home", () => {
     });
 
     render(
-      <ChakraProvider>
-        <Wrapper>Test mobile navigation</Wrapper>
-      </ChakraProvider>,
+      <GoogleReCaptchaProvider reCaptchaKey={captchaKey}>
+        <ChakraProvider>
+          <Wrapper>Test mobile navigation</Wrapper>
+        </ChakraProvider>
+      </GoogleReCaptchaProvider>,
     );
 
     expect(window.innerWidth).toBe(400);

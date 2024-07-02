@@ -1,5 +1,6 @@
 "use client";
 
+import config from "@/config";
 import {
   CloseIcon,
   HamburgerIcon,
@@ -22,6 +23,7 @@ import { setCookie } from "cookies-next";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import SmallWithLogoLeft from "./footer";
 import NavLink from "./navLink";
 import styles from "./wrapper.module.css";
@@ -50,7 +52,7 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
   }, [colorMode]);
 
   return (
-    <>
+    <GoogleReCaptchaProvider reCaptchaKey={config.app.captchaKey}>
       <Box data-testid="wrapper" bg={useColorModeValue("gray.300", "gray.900")}>
         <Flex
           h={16}
@@ -142,6 +144,6 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
       <Box className={styles.wrapper}>{children}</Box>
 
       <SmallWithLogoLeft />
-    </>
+    </GoogleReCaptchaProvider>
   );
 }

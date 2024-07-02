@@ -12,13 +12,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import { ReactNode } from "react";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaTwitter,
-  FaYelp,
-  FaYoutube,
-} from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 
 const SocialButton = ({
   children,
@@ -54,6 +48,8 @@ const SocialButton = ({
 
 export default function SmallWithLogoLeft() {
   const { colorMode } = useColorMode();
+  const d = new Date();
+  const year = d.getFullYear();
 
   return (
     <Box>
@@ -71,16 +67,31 @@ export default function SmallWithLogoLeft() {
           width={120}
           alt="Bobs logo"
         />
-        <Text>© 2022 Chakra Templates. All rights reserved</Text>
+        <Text>© {year} Illustrious Online. All rights reserved</Text>
         <Stack direction={"row"} spacing={6}>
-          <SocialButton label={"Twitter"} href={"#"}>
-            <FaTwitter />
+          <SocialButton label={"Google"} href={"https://g.co/kgs/ryat5b9"}>
+            <FcGoogle />
           </SocialButton>
-          <SocialButton label={"Facebook"} href={"#"}>
-            <FaFacebook />
+          <SocialButton
+            label={"YellowPages"}
+            href={
+              "https://www.yellowpages.com/cedar-rapids-ia/mip/bobs-heating-service-551525620"
+            }
+          >
+            <Image
+              borderRadius="full"
+              src={"yellowpages.svg"}
+              width={10}
+              alt="Bobs logo"
+            />
           </SocialButton>
-          <SocialButton label={"Yelp"} href={"#"}>
-            <FaYelp />
+          <SocialButton
+            label={"NextDoor"}
+            href={
+              "https://api.nextdoor.com/pages/bobs-heating-cooling-cedar-rapids-ia-1/"
+            }
+          >
+            <Image src={"nextdoor.png"} width={10} alt="Bobs logo" />
           </SocialButton>
         </Stack>
       </Container>

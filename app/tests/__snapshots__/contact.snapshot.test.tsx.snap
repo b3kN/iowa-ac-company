@@ -3,7 +3,7 @@
 exports[`renders homepage unchanged 1`] = `
 <div>
   <div
-    class="css-153eglr"
+    class="css-cjmp54"
   >
     <div
       class="css-cih2ll"
@@ -11,10 +11,10 @@ exports[`renders homepage unchanged 1`] = `
       <h2
         class="chakra-heading css-1dklj6k"
       >
-        Contact
+        Contact Us
       </h2>
       <p
-        class="chakra-text css-49kcn5"
+        class="chakra-text css-vc5bcz"
       >
         Fill out the form, or contact us directly!
       </p>
@@ -24,22 +24,22 @@ exports[`renders homepage unchanged 1`] = `
         <div
           class="chakra-stack css-1mmlzsv"
         >
-          <button
-            class="chakra-button css-leqrnu"
-            type="button"
+          <a
+            class="chakra-button css-5e8dx5"
+            href="tel:+13199817333"
           >
             <span
               class="chakra-button__icon css-1wh2kri"
             >
               <svg
                 aria-hidden="true"
-                color="#1970F1"
+                color="#0054ba"
                 fill="currentColor"
                 focusable="false"
                 height="20px"
                 stroke="currentColor"
                 stroke-width="0"
-                style="color: rgb(25, 112, 241);"
+                style="color: rgb(0, 84, 186);"
                 viewBox="0 0 24 24"
                 width="20px"
                 xmlns="http://www.w3.org/2000/svg"
@@ -53,24 +53,24 @@ exports[`renders homepage unchanged 1`] = `
                 />
               </svg>
             </span>
-            +91-988888888
-          </button>
-          <button
-            class="chakra-button css-leqrnu"
-            type="button"
+            +1 (319) 981-7333
+          </a>
+          <a
+            class="chakra-button css-5e8dx5"
+            href="mailto:fake@fake.com"
           >
             <span
               class="chakra-button__icon css-1wh2kri"
             >
               <svg
                 aria-hidden="true"
-                color="#1970F1"
+                color="#0054ba"
                 fill="currentColor"
                 focusable="false"
                 height="20px"
                 stroke="currentColor"
                 stroke-width="0"
-                style="color: rgb(25, 112, 241);"
+                style="color: rgb(0, 84, 186);"
                 viewBox="0 0 24 24"
                 width="20px"
                 xmlns="http://www.w3.org/2000/svg"
@@ -85,38 +85,7 @@ exports[`renders homepage unchanged 1`] = `
               </svg>
             </span>
             hello@abc.com
-          </button>
-          <button
-            class="chakra-button css-leqrnu"
-            type="button"
-          >
-            <span
-              class="chakra-button__icon css-1wh2kri"
-            >
-              <svg
-                aria-hidden="true"
-                color="#1970F1"
-                fill="currentColor"
-                focusable="false"
-                height="20px"
-                stroke="currentColor"
-                stroke-width="0"
-                style="color: rgb(25, 112, 241);"
-                viewBox="0 0 24 24"
-                width="20px"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M0 0h24v24H0z"
-                  fill="none"
-                />
-                <path
-                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"
-                />
-              </svg>
-            </span>
-            Karnavati, India
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -124,124 +93,132 @@ exports[`renders homepage unchanged 1`] = `
       class="css-f175dq"
     >
       <div
-        class="css-1i9dgu7"
+        class="css-19nw6uu"
       >
-        <div
-          class="chakra-stack css-tx0vij"
-        >
+        <form>
           <div
-            class="chakra-form-control css-1kxonj9"
-            role="group"
+            class="chakra-stack css-tx0vij"
           >
-            <label
-              class="chakra-form__label css-g6pte"
-              for="name"
-              id="name-label"
-            >
-              Your Name
-            </label>
             <div
-              class="chakra-input__group css-qd06fg"
-              data-group="true"
+              class="chakra-form-control css-1kxonj9"
+              role="group"
             >
-              <div
-                class="chakra-input__left-element css-gv1iwz"
+              <label
+                class="chakra-form__label css-g6pte"
+                for="field-:r0:"
+                id="field-:r0:-label"
               >
-                <svg
-                  color="gray.800"
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 16 16"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
+                Your Name
+              </label>
+              <div
+                class="chakra-input__group css-qlrk67"
+                data-group="true"
+              >
+                <div
+                  class="chakra-input__left-element css-gv1iwz"
                 >
-                  <path
-                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
-                  />
-                </svg>
+                  <svg
+                    color="gray.800"
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 16 16"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
+                    />
+                  </svg>
+                </div>
+                <input
+                  class="chakra-input css-1v1ieza"
+                  id="name"
+                  name="name"
+                  placeholder="Your Name"
+                  type="text"
+                />
               </div>
-              <input
-                class="chakra-input css-qluo93"
-                id="name"
-                type="text"
+            </div>
+            <div
+              class="chakra-form-control css-1kxonj9"
+              role="group"
+            >
+              <label
+                class="chakra-form__label css-g6pte"
+                for="field-:r1:"
+                id="field-:r1:-label"
+              >
+                Mail
+              </label>
+              <div
+                class="chakra-input__group css-qlrk67"
+                data-group="true"
+              >
+                <div
+                  class="chakra-input__left-element css-gv1iwz"
+                >
+                  <svg
+                    color="gray.800"
+                    fill="currentColor"
+                    height="1em"
+                    stroke="currentColor"
+                    stroke-width="0"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 0h24v24H0V0z"
+                      fill="none"
+                    />
+                    <path
+                      d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"
+                    />
+                  </svg>
+                </div>
+                <input
+                  class="chakra-input css-1v1ieza"
+                  id="email"
+                  name="email"
+                  placeholder="Your Email Address"
+                  type="text"
+                />
+              </div>
+            </div>
+            <div
+              class="chakra-form-control css-1kxonj9"
+              role="group"
+            >
+              <label
+                class="chakra-form__label css-g6pte"
+                for="field-:r2:"
+                id="field-:r2:-label"
+              >
+                Message
+              </label>
+              <textarea
+                class="chakra-textarea css-1ixcxpl"
+                id="message"
+                name="message"
+                placeholder="Type your message here"
+                rows="10"
               />
             </div>
-          </div>
-          <div
-            class="chakra-form-control css-1kxonj9"
-            role="group"
-          >
-            <label
-              class="chakra-form__label css-g6pte"
-              for="name"
-              id="name-label"
-            >
-              Mail
-            </label>
             <div
-              class="chakra-input__group css-qd06fg"
-              data-group="true"
+              class="chakra-form-control css-1duwtod"
+              role="group"
             >
-              <div
-                class="chakra-input__left-element css-gv1iwz"
+              <button
+                class="chakra-button css-5xkwb2"
+                type="submit"
               >
-                <svg
-                  color="gray.800"
-                  fill="currentColor"
-                  height="1em"
-                  stroke="currentColor"
-                  stroke-width="0"
-                  viewBox="0 0 24 24"
-                  width="1em"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0 0h24v24H0V0z"
-                    fill="none"
-                  />
-                  <path
-                    d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"
-                  />
-                </svg>
-              </div>
-              <input
-                class="chakra-input css-qluo93"
-                id="name"
-                type="text"
-              />
+                Send Message
+              </button>
             </div>
           </div>
-          <div
-            class="chakra-form-control css-1kxonj9"
-            role="group"
-          >
-            <label
-              class="chakra-form__label css-g6pte"
-              for="name"
-              id="name-label"
-            >
-              Message
-            </label>
-            <textarea
-              class="chakra-textarea css-1stw1ou"
-              id="name"
-              placeholder="message"
-            />
-          </div>
-          <div
-            class="chakra-form-control css-1duwtod"
-            role="group"
-          >
-            <button
-              class="chakra-button css-ielbvy"
-              type="button"
-            >
-              Send Message
-            </button>
-          </div>
-        </div>
+        </form>
       </div>
     </div>
   </div>
