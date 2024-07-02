@@ -24,6 +24,7 @@ import Link from "next/link";
 import { useEffect } from "react";
 import SmallWithLogoLeft from "./footer";
 import NavLink from "./navLink";
+import styles from "./wrapper.module.css";
 
 const Links = [
   {
@@ -138,7 +139,7 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
         ) : null}
       </Box>
 
-      <Box>{children}</Box>
+      <Box className={styles.wrapper}>{children}</Box>
 
       <SmallWithLogoLeft />
     </>

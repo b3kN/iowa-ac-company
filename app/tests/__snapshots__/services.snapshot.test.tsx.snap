@@ -3,14 +3,121 @@
 exports[`renders homepage unchanged 1`] = `
 <div>
   <div
-    class="main css-0"
+    class="css-1mw79y0"
   >
-    <div
-      class="description css-0"
+    <h2
+      class="chakra-heading css-sxeje8"
     >
-      <h1>
-        Hello World
-      </h1>
+      Services We Provide
+    </h2>
+    <div
+      class="chakra-tabs css-79elbk"
+    >
+      <div
+        aria-orientation="horizontal"
+        class="chakra-tabs__tablist css-1lcez8f"
+        role="tablist"
+      >
+        <button
+          aria-controls="tabs-:r0:--tabpanel-0"
+          aria-disabled="false"
+          aria-selected="true"
+          class="chakra-tabs__tab css-5wl5ud"
+          data-index="0"
+          id="tabs-:r0:--tab-0"
+          role="tab"
+          tabindex="0"
+          type="button"
+        >
+          Heating
+        </button>
+        <button
+          aria-controls="tabs-:r0:--tabpanel-1"
+          aria-disabled="false"
+          aria-selected="false"
+          class="chakra-tabs__tab css-5wl5ud"
+          data-index="1"
+          id="tabs-:r0:--tab-1"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Cooling
+        </button>
+        <button
+          aria-controls="tabs-:r0:--tabpanel-2"
+          aria-disabled="false"
+          aria-selected="false"
+          class="chakra-tabs__tab css-5wl5ud"
+          data-index="2"
+          id="tabs-:r0:--tab-2"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          Repair
+        </button>
+      </div>
+      <div
+        class="chakra-tabs__tab-panels css-8atqhb"
+      >
+        <div
+          aria-labelledby="tabs-:r0:--tab-0"
+          class="chakra-tabs__tab-panel css-sjt5nk"
+          id="tabs-:r0:--tabpanel-0"
+          role="tabpanel"
+          tabindex="0"
+        >
+          <p
+            class="chakra-text css-1drbkg9"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent aliquet mi id odio faucibus convallis. Integer in libero vel massa finibus commodo at ac massa. Mauris vehicula ipsum sed nunc consequat elementum. Donec lobortis nisi ac mi mattis venenatis. Donec tellus erat, varius ut diam sed, aliquet gravida velit. Nullam pharetra diam id urna mattis blandit. Donec pharetra lorem tellus, at sollicitudin sem aliquet sed. Curabitur finibus, elit et pharetra aliquet, lacus leo tempus leo, rhoncus pharetra tortor lorem sed est. Donec porttitor risus et nibh placerat, in semper dui ornare.
+          </p>
+          <p
+            class="chakra-text css-0"
+          >
+            Nunc ultrices purus dui, in lobortis tellus accumsan sit amet. Etiam vehicula ac odio vitae tristique. Curabitur ultricies ultrices est, id tempor enim faucibus eu. Nulla sem dolor, pharetra ut ligula vitae, imperdiet ullamcorper felis. Donec mattis elit tortor, ac semper nibh bibendum et. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras tempor feugiat urna nec molestie. Suspendisse potenti. Duis imperdiet ut mi eget scelerisque. Maecenas blandit vitae ligula varius aliquam. Phasellus sagittis risus eu dui consectetur, non gravida ante tempus. Nullam convallis auctor aliquam. Cras faucibus lectus leo, et condimentum tellus rhoncus id. Morbi sed nunc consequat, venenatis mi non, luctus mi. Nam nunc erat, ultricies eu massa eu, rutrum tincidunt nisi. Aenean non libero non sapien rutrum dictum vitae vel metus.
+          </p>
+        </div>
+        <div
+          aria-labelledby="tabs-:r0:--tab-1"
+          class="chakra-tabs__tab-panel css-sjt5nk"
+          hidden=""
+          id="tabs-:r0:--tabpanel-1"
+          role="tabpanel"
+          tabindex="0"
+        >
+          <p
+            class="chakra-text css-1drbkg9"
+          >
+            Duis nec aliquam diam, a interdum velit. Nulla vulputate ipsum vel nulla tempor, et consectetur quam lobortis. Quisque vitae quam at sem molestie imperdiet et nec magna. Nulla aliquet libero sed libero tincidunt, sed molestie lectus bibendum. Etiam laoreet ex vitae pulvinar mollis. Nunc commodo fringilla odio, eu imperdiet orci laoreet at. Vivamus malesuada pulvinar fermentum. Aliquam et urna in lacus pulvinar tempus vitae eget mauris. Morbi vel dui dignissim, semper nisi pretium, suscipit massa. Integer condimentum arcu ut nisl laoreet, a gravida ex porttitor.
+          </p>
+          <p
+            class="chakra-text css-0"
+          >
+            Quisque aliquam, enim eget mattis consectetur, magna libero elementum mauris, eget bibendum mauris libero fermentum justo. Proin in posuere augue, a rutrum turpis. Nulla sed viverra purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla efficitur odio posuere ex varius dapibus. Maecenas non dui sagittis, dignissim enim a, euismod turpis. Etiam porta magna nec est facilisis tempus.
+          </p>
+        </div>
+        <div
+          aria-labelledby="tabs-:r0:--tab-2"
+          class="chakra-tabs__tab-panel css-sjt5nk"
+          hidden=""
+          id="tabs-:r0:--tabpanel-2"
+          role="tabpanel"
+          tabindex="0"
+        >
+          <p
+            class="chakra-text css-1drbkg9"
+          >
+            Suspendisse eget sodales sem. Praesent varius vitae justo id tincidunt. Etiam vel tortor ullamcorper, dictum dui nec, congue mi. Donec pellentesque eleifend massa vel porta. Nulla bibendum id ipsum a consequat. In vitae nunc dictum, lacinia nulla eget, convallis nibh. Phasellus molestie lorem velit, sit amet porttitor eros lacinia pellentesque. Aenean convallis nunc ullamcorper posuere auctor. Aenean placerat, metus et lobortis vulputate, diam ligula aliquet risus, ut vulputate metus tellus ac massa.
+          </p>
+          <p
+            class="chakra-text css-0"
+          >
+            Morbi pellentesque consectetur enim. Nunc venenatis, ipsum non laoreet vestibulum, nisl tortor ornare libero, at varius lacus nisl a urna. Maecenas mattis eget lectus sagittis auctor. Maecenas molestie finibus nulla vitae ornare. Sed suscipit purus id tortor finibus, vitae finibus velit consequat. Vestibulum tincidunt libero orci. Duis fringilla porta quam, non fermentum mauris molestie ac. Nam et purus imperdiet, dignissim lectus quis, mollis est. Sed eu tempus odio. Vivamus blandit leo in odio pellentesque imperdiet. Nam rutrum varius ex, nec convallis mi efficitur at. Nunc dapibus mattis scelerisque. Nulla ac imperdiet purus. Integer quis congue magna, eu vestibulum sapien. Cras eleifend rhoncus tempus. Nulla ut neque augue.
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
