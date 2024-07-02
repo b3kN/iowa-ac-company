@@ -25,12 +25,12 @@ export default function About() {
           About Bob's
         </Heading>
         <Text>
-          Established in 2003, {config.app.name} offers quality and
-          professional services to Cedar Rapids, IA, and the surrounding area.
-          Our services include the repair and installation of air conditioners
-          and furnaces. We understand the importance of heating and cooling for
-          your home, and our friendly staff will gladly attend to your needs.
-          Give us a call today.
+          Established in 2003, {config.app.name} offers quality and professional
+          services to Cedar Rapids, IA, and the surrounding area. Our services
+          include the repair and installation of air conditioners and furnaces.
+          We understand the importance of heating and cooling for your home, and
+          our friendly staff will gladly attend to your needs. Give us a call
+          today.
         </Text>
       </Box>
       <PictureHero />

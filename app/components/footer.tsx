@@ -11,9 +11,9 @@ import {
   useColorMode,
   useColorModeValue,
 } from "@chakra-ui/react";
+import NextLink from "next/link";
 import { ReactNode } from "react";
 import { FcGoogle } from "react-icons/fc";
-import NextLink from "next/link";
 
 const SocialButton = ({
   children,

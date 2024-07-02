@@ -64,15 +64,15 @@ export default function Contact() {
   // Create an event handler so you can call the verification on button click event or form submit
   const handleReCaptchaVerify = useCallback(async () => {
     if (!executeRecaptcha) {
-      console.log('Execute recaptcha not yet available');
+      console.log("Execute recaptcha not yet available");
       return;
     }
-    console.log('obtain token now');
+    console.log("obtain token now");
 
-    const token = await executeRecaptcha('verifyInquiry');
+    const token = await executeRecaptcha("verifyInquiry");
     const validToken = await validateRecaptcha(token);
-    console.log('obtained token', token);
-    console.log('goken validation', validToken);
+    console.log("obtained token", token);
+    console.log("goken validation", validToken);
     setVerified(validToken);
     // Do whatever you want with the token
   }, [executeRecaptcha]);
@@ -92,9 +92,7 @@ export default function Contact() {
       alignItems="center"
       gap={{ base: 12, md: 14, lg: 18 }}
     >
-      <GoogleReCaptcha
-        onVerify={handleReCaptchaVerify}
-      />
+      <GoogleReCaptcha onVerify={handleReCaptchaVerify} />
       <Box width={{ base: "16rem", sm: "20rem", lg: "24rem" }}>
         <Heading>Contact Us</Heading>
         <Text
@@ -254,7 +252,7 @@ export default function Contact() {
                     color="white"
                     _hover={{}}
                     _disabled={{
-                      bg: "gray.500"
+                      bg: "gray.500",
                     }}
                     disabled={!verified}
                   >

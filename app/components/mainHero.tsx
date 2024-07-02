@@ -56,7 +56,7 @@ export default function MainHero() {
           alignSelf={"center"}
           position={"relative"}
         >
-          <NextLink href='/services' passHref>
+          <NextLink href="/services" passHref>
             <Button
               bg={useColorModeValue("blue.300", "brand.700")}
               rounded={"full"}
@@ -69,12 +69,8 @@ export default function MainHero() {
             </Button>
           </NextLink>
 
-          <NextLink href='/about' passHref>
-            <Button
-              variant={"link"}
-              colorScheme={"brand"}
-              size={"sm"}
-            >
+          <NextLink href="/about" passHref>
+            <Button variant={"link"} colorScheme={"brand"} size={"sm"}>
               Learn more about us
             </Button>
           </NextLink>
