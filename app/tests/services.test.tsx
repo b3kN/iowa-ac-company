@@ -2,12 +2,12 @@
  * @jest-environment jsdom
  */
 
-import Contact from "@/contact/page";
+import Services from "@/services/page";
 import { render, screen } from "@testing-library/react";
 
 describe("Contact", () => {
   it("renders about heading", () => {
-    render(<Contact />);
+    render(<Services />);
 
     const heading = screen.getByRole("heading");
 

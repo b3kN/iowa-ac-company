@@ -11,6 +11,14 @@ const styles = {
 
 const Theme = extendTheme({
   styles,
+  colors: {
+    brand: {
+      100: "#2967b3",
+      400: "#195fb5",
+      700: "#0d5ab8",
+      900: "#0054ba",
+    },
+  },
   initialColorMode: "system",
   useSystemColorMode: true,
 });

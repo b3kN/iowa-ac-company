@@ -1,3 +1,11 @@
 .wrapper {
-  min-height: calc(100vh - 9.5rem)
+  min-height: calc(100vh - 9.5rem);
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+.wrapper.center {
+  justify-content: center;
+  align-items: center;
 }
