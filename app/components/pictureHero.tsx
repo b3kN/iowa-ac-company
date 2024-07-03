@@ -6,6 +6,7 @@ import {
   VStack,
   useBreakpointValue,
 } from "@chakra-ui/react";
+import NextLink from "next/link";
 
 export default function PictureHero() {
   return (
@@ -33,22 +34,26 @@ export default function PictureHero() {
             eiusmod tempor
           </Text>
           <Stack direction={"row"}>
-            <Button
-              bg={"brand.700"}
-              rounded={"full"}
-              color={"white"}
-              _hover={{ bg: "blue.500" }}
-            >
-              Schedule Service
-            </Button>
-            <Button
-              bg={"whiteAlpha.300"}
-              rounded={"full"}
-              color={"white"}
-              _hover={{ bg: "whiteAlpha.500" }}
-            >
-              Contact Us
-            </Button>
+            <NextLink href="/services" passHref>
+              <Button
+                bg={"brand.700"}
+                rounded={"full"}
+                color={"white"}
+                _hover={{ bg: "blue.500" }}
+              >
+                Schedule Service
+              </Button>
+            </NextLink>
+            <NextLink href="/contact" passHref>
+              <Button
+                bg={"whiteAlpha.300"}
+                rounded={"full"}
+                color={"white"}
+                _hover={{ bg: "whiteAlpha.500" }}
+              >
+                Contact Us
+              </Button>
+            </NextLink>
           </Stack>
         </Stack>
       </VStack>

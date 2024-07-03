@@ -10,6 +10,7 @@ import {
   chakra,
   useColorModeValue,
 } from "@chakra-ui/react";
+import NextLink from "next/link";
 
 interface FeatureProps {
   heading: string;
@@ -42,15 +43,17 @@ export default function ServicesGrid() {
             <chakra.h2 fontSize="3xl" fontWeight="700" lineHeight={1}>
               Services We Provide
             </chakra.h2>
-            <Button
-              bg={useColorModeValue("blue.300", "brand.700")}
-              _hover={{
-                bg: "blue.500",
-              }}
-              size="md"
-            >
-              View Services
-            </Button>
+            <NextLink href="/contact" passHref>
+              <Button
+                bg={useColorModeValue("blue.300", "brand.700")}
+                _hover={{
+                  bg: "blue.500",
+                }}
+                size="md"
+              >
+                View Services
+              </Button>
+            </NextLink>
           </VStack>
         </GridItem>
         <GridItem>
