@@ -1,5 +1,4 @@
 import config from "@/config";
-import { RecaptchaEnterpriseServiceClient } from "@google-cloud/recaptcha-enterprise";
 import sendgrid from "@sendgrid/mail";
 import { NextRequest, NextResponse } from "next/server";
 
