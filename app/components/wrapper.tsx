@@ -53,7 +53,15 @@ export default function Wrapper({ children }: { children: React.ReactNode }) {
   }, [colorMode]);
 
   return (
-    <GoogleReCaptchaProvider reCaptchaKey={config.app.captchaKey}>
+    <GoogleReCaptchaProvider
+      reCaptchaKey={config.app.captchaKey}
+      scriptProps={{
+        async: false,
+        defer: false,
+        appendTo: "head",
+        nonce: undefined,
+      }}
+    >
       <Box data-testid="wrapper" bg={useColorModeValue("gray.300", "gray.900")}>
         <Flex
           h={16}

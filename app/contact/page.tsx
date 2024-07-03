@@ -1,7 +1,5 @@
 "use client";
 
-import { sendEmail } from "@/utils/sendEmail";
-import { validateRecaptcha } from "@/utils/validateRecaptcha";
 import {
   Box,
   Button,
@@ -22,8 +20,8 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { useCallback, useEffect, useState } from "react";
-import { GoogleReCaptcha, useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import { useCallback } from "react";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { useForm } from "react-hook-form";
 import { BsPerson } from "react-icons/bs";
 import { MdEmail, MdOutlineEmail, MdPhone } from "react-icons/md";
@@ -32,55 +30,43 @@ export type FormData = {
   name: string;
   email: string;
   message: string;
-  token: string;
 };
 
 export default function Contact() {
-  const [verified, setVerified] = useState(false);
   const toast = useToast();
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
   } = useForm<FormData>();
-  async function onSubmit(data: FormData) {
-    try {
-      const emailResponse = await sendEmail(data);
-      toast({
-        title: `${emailResponse.message}`,
-        status: "success",
-        isClosable: true,
-      });
-    } catch (error) {
-      toast({
-        title: `${error.message}`,
-        status: "error",
-        isClosable: true,
-      });
-    }
-  }
   const { executeRecaptcha } = useGoogleReCaptcha();
 
-  // Create an event handler so you can call the verification on button click event or form submit
-  const handleReCaptchaVerify = useCallback(async () => {
-    if (!executeRecaptcha) {
-      console.log("Execute recaptcha not yet available");
-      return;
-    }
-    console.log("obtain token now");
+  const handleReCaptchaVerify = useCallback(
+    async (data: FormData) => {
+      if (!executeRecaptcha) {
+        console.log("Execute recaptcha not yet available");
+        return;
+      }
 
-    const token = await executeRecaptcha("verifyInquiry");
-    const validToken = await validateRecaptcha(token);
-    console.log("obtained token", token);
-    console.log("goken validation", validToken);
-    setVerified(validToken);
-    // Do whatever you want with the token
-  }, [executeRecaptcha]);
+      const token = await executeRecaptcha("verifyInquiry");
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        body: JSON.stringify({ ...data, token }),
+        headers: {
+          Accept: "application/json, text/plain, */*",
+          "Content-Type": "application/json",
+        },
+      });
+      const resJson = await response.json();
 
-  // You can use useEffect to trigger the verification as soon as the component being loaded
-  useEffect(() => {
-    handleReCaptchaVerify();
-  }, [handleReCaptchaVerify]);
+      toast({
+        title: `${resJson.error ?? resJson.message}`,
+        status: resJson.error ? "error" : "success",
+        isClosable: true,
+      });
+    },
+    [executeRecaptcha],
+  );
 
   return (
     <Flex
@@ -92,7 +78,6 @@ export default function Contact() {
       alignItems="center"
       gap={{ base: 12, md: 14, lg: 18 }}
     >
-      <GoogleReCaptcha onVerify={handleReCaptchaVerify} />
       <Box width={{ base: "16rem", sm: "20rem", lg: "24rem" }}>
         <Heading>Contact Us</Heading>
         <Text
@@ -145,7 +130,7 @@ export default function Contact() {
           m={8}
           color="gray.700"
         >
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit(handleReCaptchaVerify)}>
             <VStack spacing={5}>
               <FormControl isInvalid={!!errors.name}>
                 <FormLabel>Your Name</FormLabel>
@@ -254,7 +239,6 @@ export default function Contact() {
                     _disabled={{
                       bg: "gray.500",
                     }}
-                    disabled={!verified}
                   >
                     Send Message
                   </Button>
